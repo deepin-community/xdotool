@@ -1,0 +1,68 @@
+Source: xdotool
+Section: x11
+Priority: optional
+Maintainer: Deepin Developer <deepin-dev@deepin.org>
+Build-Depends:
+ debhelper (>= 11~),
+ dh-exec (>= 0.3),
+ doxygen,
+ dpkg-dev (>= 1.17.14),
+ libx11-dev,
+ libxinerama-dev,
+ libxkbcommon-dev,
+ libxtst-dev,
+ openbox <!nocheck>,
+ perl,
+ pkg-config,
+ procps <!nocheck>,
+ ruby <!nocheck>,
+ ruby-minitest <!nocheck>,
+ x11-utils <!nocheck>,
+ x11-xkb-utils <!nocheck>,
+ xauth <!nocheck>,
+ xfonts-base <!nocheck>,
+ xkb-data <!nocheck>,
+ xterm <!nocheck>,
+ xvfb <!nocheck>,
+Standards-Version: 4.1.4
+Homepage: https://github.com/jordansissel/xdotool/
+#Vcs-Git
+#Vcs-Browser
+
+Package: xdotool
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: simulate (generate) X11 keyboard/mouse input events
+ xdotool lets you programmatically (or manually) simulate keyboard
+ input and mouse activity, move and resize windows, etc. It does this
+ using X11's XTEST extension and other Xlib functions.
+
+Package: libxdo3
+Architecture: any
+Multi-Arch: same
+Section: libs
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: library for simulating (generating) X11 keyboard/mouse input events
+ libxdo lets you programmatically (or manually) simulate keyboard
+ input and mouse activity, move and resize windows, etc. It does this
+ using X11's XTEST extension and other Xlib functions.
+
+Package: libxdo-dev
+Architecture: any
+Section: libdevel
+Depends:
+ libx11-dev,
+ libxdo3 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: library for simulating X11 keyboard/mouse input
+ libxdo lets you programmatically (or manually) simulate keyboard
+ input and mouse activity, move and resize windows, etc. It does this
+ using X11's XTEST extension and other Xlib functions.
+ .
+ This package contains developer tools (headers, libraries) for libxdo.
