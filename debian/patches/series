@@ -1,2 +1,3 @@
 0001-preserve-xdo_t-abi.patch
 0002-record-upstream-version-info-Closes-795809.patch
+0003-fix-ruby-tests-for-modern-minitest.patch
