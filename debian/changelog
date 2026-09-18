@@ -1,4 +1,4 @@
-xdotool (1:3.20160805.2-deepin) unstable; urgency=medium
+xdotool (1:3.20160805.1-deepin1) unstable; urgency=medium
 
   * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
   * d/p/0003: fix Ruby tests for modern minitest (MiniTest -> Minitest,
